@@ -78,7 +78,6 @@
 
 <div class="tab-content" class:visible={view === 'result'}>
   <Viewer
-    {funky}
     bind:this={viewer}
     bind:error={runtimeError}
     {status}

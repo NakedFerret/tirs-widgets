@@ -8,8 +8,8 @@
   export let pos = 50;
   export let fixed = false;
   export let buffer = 40;
-  export let min;
-  export let max;
+  let min;
+  let max;
 
   let w;
   let h;

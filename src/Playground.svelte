@@ -154,8 +154,6 @@
     background-color: #333;
   }
 
-  /* support Windows High Contrast Mode. Credit: Adrian Roselli https://twitter.com/aardrian/status/1021372139990134785 */
-
   @media (max-width: 750px) {
     .outer {
       position: absolute;

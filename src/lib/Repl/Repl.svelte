@@ -5,7 +5,7 @@
   import ComponentSelector from "./Input/ComponentSelector.svelte";
   import ModuleEditor from "./Input/ModuleEditor.svelte";
   import Output from "./Output/index.svelte";
-  import Bundler from "./Bundler.js";
+  // import Bundler from "./Bundler.js";
   import { is_browser } from "./env.js";
 
   export let workersUrl;
@@ -86,8 +86,8 @@
   let current_token;
   async function rebundle() {
     const token = (current_token = {});
-    const result = await bundler.bundle($components);
-    if (result && token === current_token) bundle.set(result);
+    // const result = await bundler.bundle($components);
+    // if (result && token === current_token) bundle.set(result);
   }
 
   // TODO this is a horrible kludge, written in a panic. fix it
@@ -167,16 +167,16 @@
   let runtimeErrorLoc; // TODO refactor this stuff — runtimeErrorLoc is unused
   let status = null;
 
-  const bundler =
-    is_browser &&
-    new Bundler({
-      workersUrl,
-      packagesUrl,
-      svelteUrl,
-      onstatus: (message) => {
-        status = message;
-      },
-    });
+  const bundler = false;
+    // is_browser &&
+    // new Bundler({
+    //   workersUrl,
+    //   packagesUrl,
+    //   svelteUrl,
+    //   onstatus: (message) => {
+    //     status = message;
+    //   },
+    // });
 
   $: if (output && $selected) {
     output.update($selected, $compile_options);
@@ -242,7 +242,6 @@
 
     <section slot="b">
       <Output
-        walk={true}
         {funky}
         {svelteUrl}
         {workersUrl}

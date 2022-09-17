@@ -1,17 +1,23 @@
 {
   "name": "tirs-widgets",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1-beta1",
+  "main": "dist/index.cjs",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "rollup -c rollup.prod.js",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "@tsconfig/svelte": "^3.0.0",
+    "rollup-plugin-css-only": "^3.1.0",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
