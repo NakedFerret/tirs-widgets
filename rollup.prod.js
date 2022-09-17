@@ -26,7 +26,7 @@ const dev = true;
 const config = [{
 	input: `index.ts`,
 	output: {
-		file: 'dist/index.cjs',
+		dir: 'dist',
 		format: 'cjs',
 	},
 	plugins: [svelte({

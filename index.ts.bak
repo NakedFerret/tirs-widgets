@@ -1,5 +1,0 @@
-import Playground from './src/Playground.svelte';
-
-module.exports = {
-    Playground,
-}
