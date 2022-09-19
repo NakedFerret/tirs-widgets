@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.1-beta2",
   "main": "dist/index.cjs",
+  "type": "module",
   "files": [
     "dist"
   ],
