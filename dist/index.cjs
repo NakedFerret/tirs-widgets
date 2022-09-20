@@ -2257,7 +2257,7 @@ function instance$6($$self, $$props, $$invalidate) {
 				if (editor) editor.setValue(code || "");
 			});
 		} else {
-			let mod = await Promise.resolve().then(function () { return require('./codemirror-ffa04635.js'); });
+			let mod = await Promise.resolve().then(function () { return require('./codemirror-ffa04635.cjs'); });
 			$$invalidate(5, CodeMirror = mod.default);
 			await createEditor(mode || "svelte");
 			if (editor) editor.setValue(code || "");
