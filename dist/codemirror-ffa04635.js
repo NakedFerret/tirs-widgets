@@ -14604,4 +14604,4 @@ function requireOverlay () {
 	});
 } ());
 
-exports["default"] = CodeMirror;
+module.exports["default"] = CodeMirror;
